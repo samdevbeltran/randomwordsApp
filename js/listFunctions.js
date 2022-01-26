@@ -59,8 +59,8 @@ function showSlectedPhrase(id){
 	}
 	
 	sessionStorage.setItem("presentPhrase", JSON.stringify(result));
-	window.location.href = "https://sarapp-patito.herokuapp.com/index.html#message-section";
-	//window.location.href = "http://localhost/giftProyect/index.html#message-section";
+	//window.location.href = "https://sarapp-patito.herokuapp.com/index.html#message-section";
+	window.location.href = "http://localhost/randomwordsApp/index.html#message-section";
 }
 
 

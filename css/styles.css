@@ -66,9 +66,9 @@ header nav ul li a i{
 
 .header-img{
 	
-	background-image: url('../resources/imgs/patos1.jpg');
+	background-image: url('https://merriam-webster.com/assets/mw/images/gallery/gal-home-edpick-lg/new-scrabble-words-2018-beatdown-5657-57124c9f228c0258d65053fe7d389149@1x.jpg');
 	background-size: cover;
-	height: 80vh;
+	height: 306px;
 }
 
 
@@ -81,11 +81,9 @@ header nav ul li a i{
 .msg-container{
 	border: 5px solid var(--accent1-color);
 	background-color: white;
-	padding: 7%;
-	padding: 15px;
-    height: 346px;
-    overflow: auto;
+  overflow: auto;
 }
+
 
 .msg-container p{
 	text-align: center;
@@ -101,23 +99,29 @@ header nav ul li a i{
 	margin: 2% 0;	
 }
 
-.btn-container div{
-	margin: 2% 0;
-}
 
 .btn-container,button,a{
 	text-align: center;
 }
 
-.btn-container  button{
+.btn-container button{
 	color: white;	
 	background-color: var(--accent1-color);	
+	border: 2px solid var(--accent1-color);
 }
 
 .btn-container  button:hover{
 	color: var(--headline-color-on-color);
-	border: 2px solid var(--accent1-color);
+	
 	background-color: transparent;
+}
+
+#random-button{
+	color: white;
+}
+
+#random-button:hover{
+	color: var(--accent1-color);
 }
 
 #buscar-button{
@@ -162,7 +166,6 @@ header nav ul li a i{
 #list-container{
 	border: 5px solid var(--accent1-color);
 	background-color: white;
-	padding: 7%;
 	padding: 15px;
     height: 346px;
     overflow: auto;
@@ -192,6 +195,7 @@ header nav ul li a i{
 	margin-bottom: 3%;
 }
 
+
 footer{
 	text-align: center;
     margin-top: 7%;
@@ -215,7 +219,7 @@ footer{
 	}
 
 	.header2-img{
-		background-image: url('../resources/imgs/ermita2.jpg');
+		background-image: url('https://kinsta.com/es/wp-content/uploads/sites/8/2020/02/envio-sitio-web-los-motores-busqueda-1024x512.jpg');
 		height: 116px;
 		padding: 7%;
 	}
@@ -224,6 +228,13 @@ footer{
 	}
 	.search-container input{
 		width: 78%;
+	}
+	.btn-container div{
+		margin: 2% 0;	
+	}
+	.msg-container{
+		padding: 11%;
+	  height: 241px;
 	}
 }
 
@@ -237,8 +248,8 @@ footer{
 		font-size: 1.2em;
 	}
 	.header2-img{
-		background-image: url('../resources/imgs/ermita1.jpg');
-		height: 60vh;
+		background-image: url(https://kinsta.com/es/wp-content/uploads/sites/8/2020/02/envio-sitio-web-los-motores-busqueda-1024x512.jpg);
+		height: 367px;
 		padding: 6%;
 	}
 	.search-bar{
@@ -246,10 +257,24 @@ footer{
     	margin: auto;
 	}
 	.search-container input{
-		width: 88%;
+		width: 83%;
 	}
 	.header2-img h2{
 		font-size: 3em;
 	}
+	#list-container{
+		margin-top: 20px;
+	}
+	.buttons-container{
+		margin-top: 1%;
+		border: solid 4px var(--headline-color-on-white);
+	}
+	.msg-container p{
+	  height: 164px;
+	  margin: 0;
+	  padding-top: 11%;
+	}
+
+
 }
 

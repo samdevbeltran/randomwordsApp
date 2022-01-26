@@ -1,5 +1,6 @@
 import{duckSvg,searchSvg} from './icons.js';
 
+var phrasesLists ="";
 
 var patitoButtonColor = Boolean;
 
@@ -20,32 +21,35 @@ if(window.location.href.includes("index.html")){
 if(window.location.href.includes("list.html")){
 	showPhraseList();	
 }
-if(document.getElementById("pato-button") != null){
-	document.getElementById("pato-button").addEventListener("mouseup",function(){
+if(document.getElementById("random-button") != null){
+	document.getElementById("random-button").addEventListener("mouseup",function(){
 		setTimeout(function(){
-			normalPatitoButtonColor("pato-button");
+			normalPatitoButtonColor("random-button");
 		},200);	
 	});
-	document.getElementById("pato-button").addEventListener("mousedown",function(){
-		pressPatitoButtonColor("pato-button");
+	document.getElementById("random-button").addEventListener("mousedown",function(){
+		pressRandomButtonColor("random-button");
 	});	
 }
 
 
 
-if(document.getElementById("pato-button") != null){
-	document.getElementById("pato-button").addEventListener("click",function(){
-	
+if(document.getElementById("random-button") != null){
+	document.getElementById("random-button").addEventListener("click",function(){
+	if(phrasesLists == ""){
 		fetch('./json/words.json').then(response =>{
 			if(response.ok){
 				return response.json();
 			}
 		}).then(result => {
 			if(result != undefined){
-				renderPhrase(getRandomPhrase(result));	
+				phrasesLists = result;
+				renderPhrase(getRandomPhrase(phrasesLists));	
 			}
 			
 		});
+	}else
+		renderPhrase(getRandomPhrase(phrasesLists));	
 
 	});	
 }
@@ -59,7 +63,10 @@ function getRandomPhrase(data){
 
 function renderPhrase(frase){
 	let fraseContainer = document.querySelector(".msg-container p");
-	fraseContainer.innerHTML = '"'+ frase["description"] +"<br>"+ frase["author"] +'"';
+	if(frase != undefined){
+		fraseContainer.innerHTML = '"'+ frase["description"] +"<br>"+ frase["author"] +'"';	
+	}
+	
 }
 
 function normalPatitoButtonColor(buttonName){
@@ -70,21 +77,21 @@ function normalPatitoButtonColor(buttonName){
 	    
 }
 
-function pressPatitoButtonColor(buttonName){
+function pressRandomButtonColor(buttonName){
 	document.getElementById(buttonName).style.cssText = 
 	"color: #65655e;"+	
 	"border: 2px solid #ff6700;";
 }
 
 function normalPatitoButtonColor2(){
-	document.getElementById("pato-button").addEventListener("mouseup",function(event) {
+	document.getElementById("random-button").addEventListener("mouseup",function(event) {
 	    event.preventDefault();
 	});
 }
 
 function insertIcons(){
-	document.getElementById("pato-button").innerHTML = duckSvg;	
-	document.getElementById("buscar-button").innerHTML = searchSvg;
+	//document.getElementById("random-button").innerHTML = duckSvg;	
+	//document.getElementById("buscar-button").innerHTML = searchSvg;
 }
 
 function showPhraseList(){
