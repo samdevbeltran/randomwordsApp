@@ -109,7 +109,7 @@ function renderPhrasesList(list){
 		}else{
 			id = result["id"];
 		}
-		document.querySelector("#list-container > ul").innerHTML += '<li>'+(result["id"]+1)+'-<a onclick="showSlectedPhrase('+id+')">'+result["description"]+" "+ "..."+'</a></li><hr class="rounded-line">';
+		document.querySelector("#list-container > ul").innerHTML += '<li>'+(result["id"]+1)+'-<a href="javascript:void(0)" onclick="showSlectedPhrase('+id+')">'+result["description"]+" "+ "..."+'</a></li><hr class="rounded-line">';
 		
 	});
 }
