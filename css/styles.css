@@ -275,6 +275,9 @@ footer{
 	  padding-top: 7%;
 	}
 
-
+	#items-container{
+    width: 50%;
+    margin: auto;
+	}
 }
 
