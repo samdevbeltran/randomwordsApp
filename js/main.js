@@ -7,7 +7,6 @@ var patitoButtonColor = Boolean;
 const storageSessionItem = sessionStorage.getItem("presentPhrase");
 
 if(window.location.href.includes("index.html")){
-	insertIcons();	
 	if(storageSessionItem != "" && storageSessionItem != null){
 		let frase = JSON.parse(storageSessionItem)
 		if(frase != undefined){
@@ -87,11 +86,6 @@ function normalPatitoButtonColor2(){
 	document.getElementById("random-button").addEventListener("mouseup",function(event) {
 	    event.preventDefault();
 	});
-}
-
-function insertIcons(){
-	//document.getElementById("random-button").innerHTML = duckSvg;	
-	//document.getElementById("buscar-button").innerHTML = searchSvg;
 }
 
 function showPhraseList(){
